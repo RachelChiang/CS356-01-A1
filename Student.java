@@ -1,6 +1,15 @@
-import java.util.ArrayList;
+/**
+ * Rachel Chiang
+ * CS 356-01
+ * Assignment 1: iVote Simulator
+ * This console-based iVote simulator supports two question types: single choice
+ * and multiple choices. The question, its type, and the answers all can be
+ * configured by the user.
+ */
 
-
+/**
+ * Holds information about each participant.
+ */
 public class Student
 {
 	private final String studentID;
@@ -19,5 +28,9 @@ public class Student
 	public String getResponse()
 	{
 		return response;
+	}
+	public String getStudentID()
+	{
+		return studentID;
 	}
 }

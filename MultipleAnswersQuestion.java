@@ -1,15 +1,28 @@
+/**
+ * Rachel Chiang
+ * CS 356-01
+ * Assignment 1: iVote Simulator
+ * This console-based iVote simulator supports two question types: single choice
+ * and multiple choices. The question, its type, and the answers all can be
+ * configured by the user.
+ */
 import java.util.ArrayList;
 
-
+/**
+ * This question type counts multiple submissions per student.
+ */
 public class MultipleAnswersQuestion extends Question
 {	
 	public MultipleAnswersQuestion(String question, ArrayList<String> possibleResponses) 
 	{
 		super(question, possibleResponses);
 	}
-
+	
+	/**
+	 * Considers all submissions by students in a way comparable to "clicks" or selecting/deselecting
+	 */
 	@Override
-	void receiveStudentAnswer(String answer)
+	public void receiveStudentAnswer(String answer)
 	{
 		char[] answers = answer.toCharArray();
 		int[] answersToRecord = new int[getStudentSubmissions().length];
